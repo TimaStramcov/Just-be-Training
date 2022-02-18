@@ -1,0 +1,24 @@
+@import '../../utils/const.scss';
+
+.header{
+    margin: 0 auto;
+    width: 97%;
+    height: $height-header;
+    // background-color: white;
+    // box-shadow: $main-shadow;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+
+    &__logo{
+        a{
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: auto;
+            height: 45px;
+        }
+    }
+}
+

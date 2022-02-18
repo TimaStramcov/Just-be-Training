@@ -1,0 +1,31 @@
+@import '../../utils/const.scss';
+
+.exercise-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    &__title{
+        margin: 5px 0;
+    }
+    &__description{
+        margin: 5px 0;
+    }
+    &__tags{
+        display: flex;
+        h3{
+            color: gray;
+            font-size: 13px;
+            text-align: left;
+            margin: 10px;
+            background-color: $main-gray;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+    .exercise-info-btn{
+        position: absolute;
+        margin-left: 30px;
+    }
+}

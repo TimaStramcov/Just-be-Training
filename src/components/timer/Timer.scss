@@ -1,0 +1,101 @@
+@import '../../utils/const.scss';
+
+.timer{
+    width: 300px;
+    height: min-content;
+    border-radius: 5px;
+    box-shadow: $main-shadow;
+    background-color: #fff;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+    transition: all ease 1s;
+    &__clock{
+        display: flex;
+        justify-content: center;
+        &-btn{
+            width: 100px;
+            height: 100px;
+            &:hover{
+                cursor: pointer;
+                transform: scale(.9);
+            }
+            &:active{
+                transform: scale(.7);
+                opacity: .5;
+                
+            }
+        }
+    }
+
+    &__time{ 
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;  
+        form{
+            display: grid;
+            column-gap: 10px;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: 60px 10px 60px 10px 60px;
+            grid-template-rows: repeat(2, 1fr);
+            input{
+                width: 60px;
+                border: none;
+                margin-top: 5px;
+                text-align: center;
+                font-size: 25px;
+                font-weight: bold;
+                padding: 0;
+                outline: none;
+                color: rgb(61, 60, 60)
+            }
+            label{
+                width: 60px;
+                font-size: 12px;
+                color: gray;
+                text-align: center;
+            }
+        }
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            display: block;
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            &:hover{
+                cursor: pointer;
+                opacity: .9;
+            }
+            &:active{
+                transform: scale(.9);
+            }
+        }
+        &-stop{
+            color: white;
+            margin-right: 20px;
+            background-color: rgba(253, 10, 71, 0.687);
+        }
+        &-reset{
+            background-color: $main-gray;
+            color: gray;
+        }
+    }
+
+    .timer__btn--start{
+        display: none;
+    }
+    .timer__btn-stop--invisible{
+        display: none;
+    }
+}

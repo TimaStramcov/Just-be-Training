@@ -1,0 +1,82 @@
+@import '../../utils/const.scss';
+
+.work-list{
+    margin: 10px auto 0;
+    width: 95%;
+    height: 90%;
+    overflow: auto;
+    &::-webkit-scrollbar{
+        width: 7px;
+        background-color: white;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $main-gray;
+    }
+    
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        height: auto;
+        font-size: 16px;
+        margin: 10px;
+        &-title{
+            display: flex;
+            justify-content: space-between;
+            height: 6%;
+            background-color: $main-gray;
+            border-radius: 10px;
+            padding: 5px 20px;
+            &-btn{
+                display: flex;
+                align-items: center;
+                button{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 10px;
+                }
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    &__sets{
+        margin: 0 20px;
+        &-header{
+            display: grid;
+            grid-template-rows: 1;
+            grid-template-columns: 5% 20% 5% 10% 20% 5%;
+            justify-content: space-between;
+            font-size: 10px;
+            color: gray;
+            text-align: right;
+            h3{
+                font-weight: normal;
+            }
+            
+        }
+        &-body{
+            display: grid;
+            grid-template-rows: 1;
+            grid-template-columns: 5% 20% 5% 10% 20% 5%;
+            justify-content: space-between;
+            font-size: 10px;
+            color: gray;
+            text-align: right;
+        }
+    }
+}
+
+.work-list-error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0;
+    width: 90%;
+    height: 90%;
+    color: gray;
+}

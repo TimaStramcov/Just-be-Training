@@ -1,0 +1,46 @@
+@import '../../utils/const.scss';
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .2);
+    pointer-events: none;  
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease .3s;
+
+    &__content{
+        transform: scale(0);
+        transition: all ease .3s;
+        width: 50vw;
+        height: 70vh;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: right;
+        box-shadow: $main-shadow;
+    }
+}
+
+.modal.active{
+    pointer-events: all;
+    opacity: 1;
+    .modal__content{
+        transform: scale(1);
+    }
+}
+
+.modal__content-btn-close{
+    margin: 10px 10px 0 0;
+    &:hover{
+        opacity: .8;
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(.9);
+    }
+}
